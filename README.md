@@ -19,7 +19,7 @@
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?&logo=MySQL&logoColor=white">
 </a>
 
-<a href=""><img src="https://img.shields.io/badge/version-0.0.1-230327?" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-0.0.2-230329?" height="22" alt="Version"/></a>
 
 <br>
 
@@ -32,6 +32,12 @@
 ## Notas de versão
 
 </a>
+
+### v0.0.2.230329
+
+- Primeiro teste com armazenamento dos dados do usuário. - ✅
+- Estilização da home page.
+- Tentativa(#02) de conexão com o Database(MySQL) - ❌ (Erro: Uncaught Error: Class "mysqli" not found).
 
 ### v0.0.1.230327
 
@@ -46,8 +52,8 @@
 
 </a>
 
-<a href="https://github.com/rryandev/form_sample/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=rryandev/form_sample" />
+<a href="https://github.com/RRyanDEV/form_sample/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=RRyanDEV/form_sample" />
 </a>
 
 <a name="section-licenca">
@@ -56,4 +62,4 @@
 
 </a>
 
-Licenciado sob a [MIT License](https://github.com/rryandev/form-sample/blob/main/LICENSE).
+Licenciado sob a [MIT License](https://github.com/RRyanDEV/form-sample/blob/main/LICENSE).

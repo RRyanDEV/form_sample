@@ -1,11 +1,14 @@
-@import 'boxLogin';
-@import 'vars';
+@import '_Boxlogin';
+@import '_vars';
 
 * {
     padding: 0;
-    margin: 0;
 }
 
 body {
-    background-color: rgba(20, 97, 142, 0.445);
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
 }

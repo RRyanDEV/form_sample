@@ -1,3 +1,41 @@
-.boxInit {
-    background-color: red;
+.Box {
+    align-items: center;
+    justify-content: center;
+    margin-top: 6.4%;
+    display: flex;
+    padding: 0% 2% 2% 2%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.formInit,
+.formCurso {
+    text-align: justify;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.inputSubmit {
+    background-color: dodgerblue;
+    border: none;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+
+}
+
+.inputSubmit:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
 }
