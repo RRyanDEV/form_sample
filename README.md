@@ -33,11 +33,20 @@
 
 </a>
 
+### v0.0.3.230330
+
+- Tentativa(#03) de conexão com o Database(MySQL) - ✅
+- O que ocasionava o erro:(Erro: Uncaught Error: Class "mysqli" not found) na conexão com o database, era que o PHP não estava sendo direcionado nas variáveis do ambiente do windows, levando ao .dll do MySQLi. (Corrigido)
+
+##
+
 ### v0.0.2.230329
 
 - Primeiro teste com armazenamento dos dados do usuário. - ✅
 - Estilização da home page.
 - Tentativa(#02) de conexão com o Database(MySQL) - ❌ (Erro: Uncaught Error: Class "mysqli" not found).
+
+##
 
 ### v0.0.1.230327
 

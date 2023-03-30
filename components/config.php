@@ -1,6 +1,6 @@
 <?php
 
-$dbHost = 'Localhost';
+$dbHost = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '2530';
 $dbName = 'formulario';
