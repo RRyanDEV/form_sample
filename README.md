@@ -19,19 +19,49 @@
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?&logo=MySQL&logoColor=white">
 </a>
 
-<a href=""><img src="https://img.shields.io/badge/version-0.0.2-230329?" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-0.0.4-230331?" height="22" alt="Version"/></a>
 
 <br>
 
-|| [Notas de versão](#section-changelog) || [Autores](#section-autores) || [Licença](#section-licenca) ||
+|| [Instruções](#section-instrucoes) || [Notas de versão](#section-changelog) || [Autores](#section-autores) || [Licença](#section-licenca) ||
 
 </div>
+
+<a name="section-instrucoes">
+
+## Instruções
+
+</a>
+
+Para o funcionamento adequado do projeto, é necessário que tenha o PHP, Git, MySQL Server e MySQL Workbench instalados em sua máquina:
+
+| Instalação do PHP no windows | Descrição                                                                                                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.                           | Primeiro vá ao site do PHP, baixe e instale a versão mais recente da `Old Stable`.                                                                                               |
+| 2.                           | Apos isso, extraia o arquivo `.zip` na pasta do usuário do sistema, localizada na `C:\Users\(NomeDoUsuário)`.                                                                    |
+| 3.                           | Depois na barra de pesquisa do windows procure por: `Editar as variáveis de ambiente do sistema`.                                                                                |
+| 4.                           | Ao abrir as `Variáveis de Ambiente`, na primeira seção (Variáveis de usuário para `Nome do Usuário`, localize pela variável `Path`.                                              |
+| 5.                           | Selecione a variável `Path`, e clique em editar. Em seguida clique em "Novo" e adicione o diretório de onde você extraiu o aquivo do PHP. (Ex:`C:\Users\NomeDoUsuário\PastaPHP`. |
+| 6.                           | Depois só salvar, e reiniciar sua máquina. Pronto, PHP instalado! **Obs:** Para confirmar que está instalado, abra o Git Bash é dê o comando `php -v`                            |
+
+### Executando o projeto
+
+Abra o Git Bash, e abra a pasta do projeto com o comando `cd (Diretório do projeto). Ex: cd /c/Users/form_sample`. Depois dê o comando `php -S localhost:8000` para executar o projeto. O site estará aberto em `https://localhost:8000`.
+
+<hr>
 
 <a name="section-changelog">
 
 ## Notas de versão
 
 </a>
+
+### v0.0.4.230331
+
+- Update do README.
+- Criado uma seção de instrução ensinando a rodar o projeto corretamente.
+
+##
 
 ### v0.0.3.230330
 
@@ -71,4 +101,4 @@
 
 </a>
 
-Licenciado sob a [MIT License](https://github.com/RRyanDEV/form-sample/blob/main/LICENSE).
+Licenciado sob a [MIT License](https://github.com/RRyanDEV/form_sample/blob/main/LICENSE).
