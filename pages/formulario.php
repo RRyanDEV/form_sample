@@ -23,18 +23,20 @@ $curso = $_POST['curso'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" href="./assets/form-icon.png">
-    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="website icon" href="/assets/form-icon.png">
+    <link rel="stylesheet" href="/scss/main.css">
     <title>Formulário</title>
 </head>
-<style>
-    body {
-        background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
-    }
-</style>
 
 <body>
-
+    <div class="BoX">
+        <div class="heading">
+            <h2>Atualização de dados de orientandos de Trabalho de Conclusão de Curso - Professor Ricardo E. Kneipp - Cursos de Pós-Graduação do IFRJ CEPF</h2>
+        </div>
+        <div class="desc">
+            <p>O objetivo deste formulário é que você meu orientando de Trabalho de Conclusão de Curso, atualize os seus dados e o status de desenvolvimento do seu trabalho.</p>
+        </div>
+    </div>
 </body>
 
 </html>

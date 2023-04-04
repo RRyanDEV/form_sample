@@ -19,7 +19,7 @@
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?&logo=MySQL&logoColor=white">
 </a>
 
-<a href=""><img src="https://img.shields.io/badge/version-0.1.4-230402?" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-0.2.4-230404?" height="22" alt="Version"/></a>
 
 <br>
 
@@ -55,6 +55,14 @@ Abra o Git Bash, e abra a pasta do projeto com o comando `cd (Diretório do proj
 ## Notas de versão
 
 </a>
+
+### v0.2.4.230404
+
+- Estilização da página de formulário.
+- Introdução as informações do formulário
+- Reestruturação da tela de usuário.
+
+##
 
 ### v0.1.4.230402
 

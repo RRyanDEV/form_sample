@@ -9,13 +9,29 @@
     color: #fff;
 }
 
-.formInit,
-.formCurso {
+.formInit {
     text-align: justify;
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.formCurso {
+    h2 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    text-align: justify;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.form-check {
+    align-items: left;
 }
 
 input {
