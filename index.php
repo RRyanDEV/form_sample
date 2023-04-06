@@ -30,17 +30,21 @@
                 </div>
                 <div class="formCurso">
                     <h2>Curso</h2>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="curso" id="DEPT" value="Docência na Educação Profissional e Tecnológica" required>
-                        <label class="form-check-label" for="curso">
-                            Docência na Educação Profissional e Tecnológica
-                        </label>
+                    <div class="rg">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="curso" id="DEPT" value="Docência na Educação Profissional e Tecnológica" required>
+                            <label class="form-check-label" for="curso">
+                                Docência na Educação Profissional e Tecnológica
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="curso" id="GPNTI" value="Gestão de Projetos e Negócios em Tecnologia da Informação" required>
-                        <label class="form-check-label" for="curso">
-                            Gestão de Projetos e Negócios em Tecnologia da Informação
-                        </label>
+                    <div class="rg">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="curso" id="GPNTI" value="Gestão de Projetos e Negócios em Tecnologia da Informação" required>
+                            <label class="form-check-label" for="curso">
+                                Gestão de Projetos e Negócios em Tecnologia da Informação
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <br>

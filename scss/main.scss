@@ -10,17 +10,55 @@ body {
     justify-content: center;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    background: $bg-color;
 }
 
 
 // Formulário
+
+.BoXForm {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.RadioGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.rg {
+    display: flex;
+    margin: 3px;
+}
+
+.BoXaCurso,
+.BoXcCurso,
+.BoXtema,
+.BoXtcc {
+    margin-top: 10px;
+    @extend .Box;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.BoXtcc {
+    h4 {
+        width: 40%;
+    }
+
+    flex-direction: column;
+    @extend .Box;
+}
 
 .BoX {
     @extend .Box;
     margin: 0;
     flex-direction: column;
     width: 55%;
+    padding-bottom: 20px;
 }
 
 .heading {
