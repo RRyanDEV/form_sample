@@ -9,12 +9,14 @@
 
 include_once('config.php');
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$curso = $_POST['curso'];
+$nome = (string)$_POST['nome'];
+$email = (string)$_POST['email'];
+$curso = (string)$_POST['curso'];
+// (string)$var, serve para converter um valor dentro da variável para String, para ser enviado pro database.
 
-// $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,curso) VALUES ($nome,$email,$curso)");
+$result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,curso) VALUES ('$nome', '$email', '$curso')");
 
+mysqli_close($conexao);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

@@ -19,7 +19,7 @@
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?&logo=MySQL&logoColor=white">
 </a>
 
-<a href=""><img src="https://img.shields.io/badge/version-0.3.4-230406?" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-0.3.5-230407?" height="22" alt="Version"/></a>
 
 <br>
 
@@ -55,6 +55,13 @@ Abra o Git Bash, e abra a pasta do projeto com o comando `cd (Diretório do proj
 ## Notas de versão
 
 </a>
+
+### v0.3.5.230407
+
+- Tentativa(#02) de envio das informações para o Database(MySQL) - ✅.
+- Feito a conversão das variáveis para string, para enviar as informações para o Database(MySQL).
+
+##
 
 ### v0.3.4.230406
 
