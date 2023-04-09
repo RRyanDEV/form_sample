@@ -10,6 +10,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   color: #fff;
+  width: 40%;
 }
 
 .formInit {
@@ -44,7 +45,7 @@ input {
   font-size: 15px;
 }
 
-.inputSubmit {
+.inputSubmit, .NextF, .bend {
   background-color: dodgerblue;
   border: none;
   width: 50%;
@@ -53,7 +54,7 @@ input {
   font-size: 15px;
 }
 
-.inputSubmit:hover {
+.inputSubmit:hover, .NextF:hover, .bend:hover {
   background-color: deepskyblue;
   cursor: pointer;
 }
@@ -70,7 +71,7 @@ body {
   background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
 }
 
-.BoXForm {
+.BoXForm, .BoXend {
   align-items: center;
   justify-content: space-between;
   display: flex;
@@ -100,14 +101,10 @@ body {
 .BoXtcc {
   flex-direction: column;
 }
-.BoXtcc h4 {
-  width: 40%;
-}
 
 .BoX {
   margin: 0;
   flex-direction: column;
-  width: 55%;
   padding-bottom: 20px;
 }
 
@@ -119,4 +116,37 @@ body {
   text-align: left;
   font-size: 15px;
   text-decoration: none;
+}
+
+.NextF, .bend {
+  background-color: transparent;
+  border: rgba(0, 0, 0, 0.6) solid;
+  width: 7%;
+}
+
+.btnf, .btend {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btend {
+  padding-top: 6px;
+  justify-content: center;
+}
+
+.datax {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 16px;
+  color: #1e90ff;
+  position: relative;
+}
+
+.BoXend {
+  padding-top: 15rem;
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

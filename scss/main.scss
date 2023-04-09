@@ -45,10 +45,6 @@ body {
 }
 
 .BoXtcc {
-    h4 {
-        width: 40%;
-    }
-
     flex-direction: column;
     @extend .Box;
 }
@@ -57,7 +53,6 @@ body {
     @extend .Box;
     margin: 0;
     flex-direction: column;
-    width: 55%;
     padding-bottom: 20px;
 }
 
@@ -69,4 +64,41 @@ body {
     text-align: left;
     font-size: 15px;
     text-decoration: none;
+}
+
+.NextF {
+    @extend .inputSubmit;
+    background-color: transparent;
+    border: rgba(0, 0, 0, 0.6) solid;
+    width: 7%;
+}
+
+.btnf {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.btend{
+    padding-top: 6px;
+    @extend .btnf;
+    justify-content: center;
+}
+.bend{
+    @extend .NextF;
+}
+.datax{
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    line-height: 16px;
+    color: $btn-color;
+    position: relative;
+}
+// Fim Formulário
+.BoXend{
+    @extend .BoXForm;
+    padding-top: 15rem;
+    display: flex;
 }
