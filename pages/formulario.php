@@ -15,8 +15,10 @@ $curso = (string)$_POST['curso'];
 // (string)$var, serve para converter um valor dentro da variável para String, para ser enviado pro database.
 
 $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,curso) VALUES ('$nome', '$email', '$curso')");
+$sqlresposta = mysqli_query($conexao, "SELECT id FROM usuarios WHERE nome='$nome'");
+$dadosrecebidos = mysqli_fetch_array($sqlresposta);
+$userid = (reset($dadosrecebidos));
 
-mysqli_close($conexao);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

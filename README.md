@@ -19,7 +19,7 @@
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?&logo=MySQL&logoColor=white">
 </a>
 
-<a href=""><img src="https://img.shields.io/badge/version-0.4.5-230409?" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-0.4.6-230413?" height="22" alt="Version"/></a>
 
 <br>
 
@@ -55,6 +55,13 @@ Abra o Git Bash, e abra a pasta do projeto com o comando `cd (Diretório do proj
 ## Notas de versão
 
 </a>
+
+### v0.4.6.230413
+
+- Finalizado a estilização e criação das informações do formulário.
+- Feito a relação de ID de usuário com o formulário. ✅
+
+##
 
 ### v0.4.5.230409
 

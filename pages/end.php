@@ -1,5 +1,9 @@
 <?php
+
 include_once('config.php');
+
+mysqli_close($conexao);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

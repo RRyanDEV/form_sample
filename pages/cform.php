@@ -1,5 +1,8 @@
 <?php
+
 include_once('config.php');
+$userid = (reset($dadosrecebidos));
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
