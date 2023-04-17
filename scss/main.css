@@ -88,6 +88,12 @@ body {
   display: flex;
   margin: 3px;
 }
+.rg__flex {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
 
 .BoXaCurso,
 .BoXcCurso,

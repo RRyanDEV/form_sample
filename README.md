@@ -19,7 +19,7 @@
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?&logo=MySQL&logoColor=white">
 </a>
 
-<a href=""><img src="https://img.shields.io/badge/version-0.4.6-230413?" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-0.4.7-230417?" height="22" alt="Version"/></a>
 
 <br>
 
@@ -55,6 +55,15 @@ Abra o Git Bash, e abra a pasta do projeto com o comando `cd (Diretório do proj
 ## Notas de versão
 
 </a>
+
+### v0.4.7.230417
+
+- Validação de email no database.
+- Reestruturação das variáveis `$_POST` usando `$_SESSION`.
+- Criação de funções para inserção de perguntas e respostas no banco.
+- Revisão do schema do database.
+
+##
 
 ### v0.4.6.230413
 

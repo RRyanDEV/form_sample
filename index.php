@@ -1,5 +1,6 @@
 <?php
-
+include_once('./pages/config.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

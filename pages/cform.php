@@ -1,7 +1,43 @@
 <?php
-
 include_once('config.php');
-$userid = (reset($dadosrecebidos));
+session_start();
+
+
+
+
+if (isset($_POST['submit'])) {
+    $_SESSION['TrabConc'] = $_POST['TrabConc'];
+    $_SESSION['AnoCurso'] = $_POST['AnoCurso'];
+
+    $_SESSION['temaTrabalho'] = $_POST['TemaTrab'];
+
+    if ($_SESSION['TrabConc'] == false) {
+        $_SESSION['TrabConc'] = "Outro";
+    };
+
+    if (empty($_POST['outrosTcc'])) {
+        $_SESSION['outrosTcc']  = " ";
+    } else {
+        $_SESSION['outrosTcc']  = $_POST['outrosTcc'];
+    };
+
+    if (empty($_POST['outroTB'])) {
+        $_SESSION['outrotb']  = " ";
+    } else {
+        $_SESSION['outrotb']  = $_POST['outroTB'];
+    };
+};
+// if (isset($_POST['submit'])) {
+//     echo ($AnoCurso);
+//     echo ('<br>');
+//     echo ($TrabConc);
+//     echo ('<br>');
+//     echo ($outrotb);
+//     echo ('<br>');
+//     echo ($TemaTrabalho);
+//     echo ('<br>');
+//     echo ($outrosTcc);
+// };
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +70,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="PBcurso" id="PBcurso" value="PBcurso" required>
+                            <input class="form-check-input" type="radio" name="PBcurso" id="PBcurso" value="Sim" required>
                             <label class="form-check-label" for="PBcurso">
                                 Sim
                             </label>
@@ -42,7 +78,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="PBcurso" id="PBcurso" value="PBcurso" required>
+                            <input class="form-check-input" type="radio" name="PBcurso" id="PBcurso" value="Não" required>
                             <label class="form-check-label" for="PBcurso">
                                 Não
                             </label>
@@ -58,7 +94,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="OBcurso" id="OBcurso" value="OBcurso" required>
+                            <input class="form-check-input" type="radio" name="OBcurso" id="OBcurso" value="Sim" required>
                             <label class="form-check-label" for="OBcurso">
                                 Sim
                             </label>
@@ -66,7 +102,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="OBcurso" id="OBcurso" value="OBcurso" required>
+                            <input class="form-check-input" type="radio" name="OBcurso" id="OBcurso" value="Não" required>
                             <label class="form-check-label" for="OBcurso">
                                 Não
                             </label>
@@ -82,7 +118,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="JTcurso" id="JTcurso" value="JTcurso" required>
+                            <input class="form-check-input" type="radio" name="JTcurso" id="JTcurso" value="Sim" required>
                             <label class="form-check-label" for="JTcurso">
                                 Sim
                             </label>
@@ -90,7 +126,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="JTcurso" id="JTcurso" value="JTcurso" required>
+                            <input class="form-check-input" type="radio" name="JTcurso" id="JTcurso" value="Não" required>
                             <label class="form-check-label" for="JTcurso">
                                 Não
                             </label>
@@ -106,7 +142,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="RFcurso" id="RFcurso" value="RFcurso" required>
+                            <input class="form-check-input" type="radio" name="RFcurso" id="RFcurso" value="Sim" required>
                             <label class="form-check-label" for="RFcurso">
                                 Sim
                             </label>
@@ -114,7 +150,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="RFcurso" id="RFcurso" value="RFcurso" required>
+                            <input class="form-check-input" type="radio" name="RFcurso" id="RFcurso" value="Não" required>
                             <label class="form-check-label" for="RFcurso">
                                 Não
                             </label>
@@ -130,7 +166,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="EMcurso" id="EMcurso" value="EMcurso" required>
+                            <input class="form-check-input" type="radio" name="EMcurso" id="EMcurso" value="Sim" required>
                             <label class="form-check-label" for="EMcurso">
                                 Sim
                             </label>
@@ -138,7 +174,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="EMcurso" id="EMcurso" value="EMcurso" required>
+                            <input class="form-check-input" type="radio" name="EMcurso" id="EMcurso" value="Não" required>
                             <label class="form-check-label" for="EMcurso">
                                 Não
                             </label>
@@ -154,7 +190,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="CDcurso" id="CDcurso" value="CDcurso" required>
+                            <input class="form-check-input" type="radio" name="CDcurso" id="CDcurso" value="Sim" required>
                             <label class="form-check-label" for="CDcurso">
                                 Sim
                             </label>
@@ -162,7 +198,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="CDcurso" id="CDcurso" value="CDcurso" required>
+                            <input class="form-check-input" type="radio" name="CDcurso" id="CDcurso" value="Não" required>
                             <label class="form-check-label" for="CDcurso">
                                 Não
                             </label>
@@ -178,7 +214,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="RBcurso" id="RBcurso" value="RBcurso" required>
+                            <input class="form-check-input" type="radio" name="RBcurso" id="RBcurso" value="Sim" required>
                             <label class="form-check-label" for="RBcurso">
                                 Sim
                             </label>
@@ -186,7 +222,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="RBcurso" id="RBcurso" value="RBcurso" required>
+                            <input class="form-check-input" type="radio" name="RBcurso" id="RBcurso" value="Não" required>
                             <label class="form-check-label" for="RBcurso">
                                 Não
                             </label>
@@ -202,7 +238,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Icurso" id="Icurso" value="Icurso" required>
+                            <input class="form-check-input" type="radio" name="Icurso" id="Icurso" value="Sim" required>
                             <label class="form-check-label" for="Icurso">
                                 Sim
                             </label>
@@ -210,7 +246,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Icurso" id="Icurso" value="Icurso" required>
+                            <input class="form-check-input" type="radio" name="Icurso" id="Icurso" value="Não" required>
                             <label class="form-check-label" for="Icurso">
                                 Não
                             </label>
@@ -226,7 +262,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Rcurso" id="Rcurso" value="Rcurso" required>
+                            <input class="form-check-input" type="radio" name="Rcurso" id="Rcurso" value="Sim" required>
                             <label class="form-check-label" for="Rcurso">
                                 Sim
                             </label>
@@ -234,7 +270,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Rcurso" id="Rcurso" value="Rcurso" required>
+                            <input class="form-check-input" type="radio" name="Rcurso" id="Rcurso" value="Não" required>
                             <label class="form-check-label" for="Rcurso">
                                 Não
                             </label>
@@ -250,7 +286,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="RCcurso" id="RCcurso" value="RCcurso" required>
+                            <input class="form-check-input" type="radio" name="RCcurso" id="RCcurso" value="Sim" required>
                             <label class="form-check-label" for="RCcurso">
                                 Sim
                             </label>
@@ -258,7 +294,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="RCcurso" id="RCcurso" value="RCcurso" required>
+                            <input class="form-check-input" type="radio" name="RCcurso" id="RCcurso" value="Não" required>
                             <label class="form-check-label" for="RCcurso">
                                 Não
                             </label>
@@ -274,7 +310,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="datax">
                     Data
                 </div>
-                <input class="date" type="date" name="data" id="dat" value="data" required>
+                <input class="date" type="date" name="data" id="data" value="data" required>
             </div>
             <div class="BoXaCurso">
                 <div class="Infor">

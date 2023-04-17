@@ -1,4 +1,6 @@
 <?php
+include_once('config.php');
+session_start();
 // if (isset($_POST['submit'])) {
 //     echo ($_POST['nome']);
 //     echo ('<br>');
@@ -6,18 +8,26 @@
 //     echo ('<br>');
 //     echo ($_POST['curso']);
 // };
+if (isset($_POST['submit'])) {
 
-include_once('config.php');
-
-$nome = (string)$_POST['nome'];
-$email = (string)$_POST['email'];
-$curso = (string)$_POST['curso'];
+    $postemail = (string)$_POST['email'];
+    $result = mysqli_query(
+        $GLOBALS['conexao'],
+        "SELECT alunos_email FROM alunos WHERE alunos_email='$postemail'"
+    );
+    $result = (mysqli_fetch_array($result));
+    if (empty($result)) {
+        $_SESSION['nome'] = (string)$_POST['nome'];
+        $_SESSION['email'] = $postemail;
+        $_SESSION['curso'] = (string)$_POST['curso'];
+    } else {
+        echo ("<script>alert('Usuário já preencheu esse formulário!')</script>");
+        echo ("<script>location.href='../index.php'</script>");
+    };
+};
 // (string)$var, serve para converter um valor dentro da variável para String, para ser enviado pro database.
+// $_SESSION, faz com que a variavel fique disponivel até a ultima página, sem zera-la.
 
-$result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,curso) VALUES ('$nome', '$email', '$curso')");
-$sqlresposta = mysqli_query($conexao, "SELECT id FROM usuarios WHERE nome='$nome'");
-$dadosrecebidos = mysqli_fetch_array($sqlresposta);
-$userid = (reset($dadosrecebidos));
 
 ?>
 <!DOCTYPE html>
@@ -33,7 +43,7 @@ $userid = (reset($dadosrecebidos));
 </head>
 
 <body>
-    <form action="/pages/cform.php" method="POST">
+    <form action="/pages/cform.php" method="POST" onsubmit="return validateoutroTB(this)">
         <div class="BoXForm">
             <div class="BoX">
                 <div class="heading">
@@ -49,32 +59,32 @@ $userid = (reset($dadosrecebidos));
                     <div class="RadioGroup">
                         <div class="rg">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="AnoCurso" required>
-                                <label class="form-check-label" for="Acurso">
+                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="2020" required>
+                                <label class="form-check-label" for="AnoCurso">
                                     2020
                                 </label>
                             </div>
                         </div>
                         <div class="rg">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="AnoCurso" required>
-                                <label class="form-check-label" for="Acurso">
+                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="2021" required>
+                                <label class="form-check-label" for="AnoCurso">
                                     2021
                                 </label>
                             </div>
                         </div>
                         <div class="rg">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="AnoCurso" required>
-                                <label class="form-check-label" for="Acurso">
+                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="2022" required>
+                                <label class="form-check-label" for="AnoCurso">
                                     2022
                                 </label>
                             </div>
                         </div>
                         <div class="rg">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="AnoCurso" required>
-                                <label class="form-check-label" for="Acurso">
+                                <input class="form-check-input" type="radio" name="AnoCurso" id="AC" value="2023" required>
+                                <label class="form-check-label" for="AnoCurso">
                                     2023
                                 </label>
                             </div>
@@ -87,7 +97,7 @@ $userid = (reset($dadosrecebidos));
                 <div class="RadioGroup">
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="TrabConc" id="TB" value="TrabConc" required>
+                            <input class="form-check-input" type="radio" name="TrabConc" id="TB" value="Monografia" required>
                             <label class="form-check-label" for="TrabConc">
                                 Monografia
                             </label>
@@ -95,7 +105,7 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="TrabConc" id="TB" value="TrabConc" required>
+                            <input class="form-check-input" type="radio" name="TrabConc" id="TB" value="Artigo" required>
                             <label class="form-check-label" for="TrabConc">
                                 Artigo
                             </label>
@@ -103,14 +113,20 @@ $userid = (reset($dadosrecebidos));
                     </div>
                     <div class="rg">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="TrabConc" id="TB" value="TrabConc" required>
+                            <input class="form-check-input" type="radio" name="TrabConc" id="TB" value="Produto" required>
                             <label class="form-check-label" for="TrabConc">
                                 Produto
                             </label>
                         </div>
                     </div>
-                    <div class="rg">
-                        <div class="input">
+                    <div class="rg__flex">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="TrabConc" id="TB" value="Outro" required>
+                            <label class="form-check-label" for="TrabConc">
+                                Outro:
+                            </label>
+                        </div>
+                        <div class="input" id="tbinput">
                             <input type="text" name="outroTB" id="outroTB" placeholder="Outro" class="inputUser">
                         </div>
                     </div>
@@ -125,7 +141,7 @@ $userid = (reset($dadosrecebidos));
             <div class="BoXtcc">
                 <h4>Se estiver fazendo o TCC com outros alunos, favor incluir o nome, e-mail e whatsapp. Caso contrário deixe esta pergunta em branco.</h4>
                 <div class="input">
-                    <input type="text" name="TemaTrab" id="TemaTrab" placeholder="Sua Resposta">
+                    <input type="text" name="outrosTcc" id="outrosTcc" placeholder="Sua Resposta">
                 </div>
             </div>
         </div>
@@ -135,6 +151,25 @@ $userid = (reset($dadosrecebidos));
             <input class="NextF" type="submit" name="submit" value="Próxima">
         </div>
     </form>
+    <script>
+        document.getElementById("tbinput").addEventListener("input", function(event) {
+            document.getElementById("tbinput").style.borderStyle = "none";
+        });
+
+        function validateoutroTB(form) {
+            let trabconc = form.TrabConc.value;
+            if ((trabconc == "Outro") && ((form.outroTB.value).toString().length < 3)) {
+                let el = document.getElementById("tbinput");
+                el.style.borderRadius = "12px";
+                el.style.borderStyle = "solid";
+                el.style.borderColor = "red";
+                window.alert("Preencha corretamente os campos em vermelho.");
+                return false;
+            } else {
+                return true;
+            };
+        };
+    </script>
 </body>
 
 </html>
