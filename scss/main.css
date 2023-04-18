@@ -1,4 +1,4 @@
-.Box, .BoX, .BoXaCurso,
+.Box, .BoX, .tbl, .BoXaCurso,
 .BoXcCurso,
 .BoXtema,
 .BoXtcc {
@@ -71,7 +71,7 @@ body {
   background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
 }
 
-.BoXForm, .BoXend {
+.BoXForm {
   align-items: center;
   justify-content: space-between;
   display: flex;
@@ -108,7 +108,7 @@ body {
   flex-direction: column;
 }
 
-.BoX {
+.BoX, .tbl {
   margin: 0;
   flex-direction: column;
   padding-bottom: 20px;
@@ -152,7 +152,48 @@ body {
   position: relative;
 }
 
-.BoXend {
-  padding-top: 15rem;
+.TitleEnd {
+  width: 100%;
+  padding: 20px 0;
+}
+.TitleEnd h2 {
+  text-align: center;
+}
+
+.endparent {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tables {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.tbl {
+  margin: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo {
+  padding: 0;
+  border-collapse: collapse;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.demo th {
+  border: 1px inset #C0C0C0;
+  padding: 4px;
+  background: #F0F0F0;
+}
+
+.demo td {
+  border: 1px inset #C0C0C0;
+  padding: 5px;
 }/*# sourceMappingURL=main.css.map */

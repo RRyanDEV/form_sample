@@ -32,7 +32,8 @@ body {
 .rg {
     display: flex;
     margin: 3px;
-    &__flex{
+
+    &__flex {
         gap: 10px;
         display: flex;
         align-items: center;
@@ -85,16 +86,19 @@ body {
     align-items: center;
     justify-content: flex-end;
 }
-.btend{
+
+.btend {
     padding-top: 6px;
     @extend .btnf;
     justify-content: center;
 }
-.bend{
+
+.bend {
     @extend .NextF;
 }
-.datax{
-    font-family: Roboto,Arial,sans-serif;
+
+.datax {
+    font-family: Roboto, Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: .3px;
@@ -102,9 +106,48 @@ body {
     color: $btn-color;
     position: relative;
 }
+
 // Fim Formulário
-.BoXend{
-    @extend .BoXForm;
-    padding-top: 15rem;
+.TitleEnd {
+    width: 100%;
+
+    h2 {
+        text-align: center;
+    }
+
+    padding: 20px 0;
+}
+.endparent {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.tables{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.tbl{
+    margin: 10px;
+    @extend .BoX;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.demo {
+    padding: 0;
+    border-collapse: collapse;
+    font-family: Roboto, Arial, sans-serif;
+}
+.demo th {
+    border: 1px inset #C0C0C0;
+    padding: 4px;
+    background: #F0F0F0;
+}
+
+.demo td {
+    border: 1px inset #C0C0C0;
+    padding: 5px;
 }
