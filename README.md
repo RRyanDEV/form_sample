@@ -19,7 +19,7 @@
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?&logo=MySQL&logoColor=white">
 </a>
 
-<a href=""><img src="https://img.shields.io/badge/version-0.5.7-230418?" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-1.0.0-230421?" height="22" alt="Version"/></a>
 
 <br>
 
@@ -55,6 +55,16 @@ Abra o Git Bash, e abra a pasta do projeto com o comando `cd (Diretório do proj
 ## Notas de versão
 
 </a>
+
+### v1.0.0.230421
+
+- Criado schema do database.
+- Gerado o UML do schema.
+- Adicionado uma verificação de informações antes do envio do formulário.
+- Ajustes no estilo.
+- Lançado a versão final do projeto.
+
+##
 
 ### v0.5.7.230418
 

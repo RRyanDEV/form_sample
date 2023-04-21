@@ -71,6 +71,10 @@ body {
   background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
 }
 
+a {
+  text-decoration: none;
+}
+
 .BoXForm {
   align-items: center;
   justify-content: space-between;
@@ -157,6 +161,7 @@ body {
   padding: 20px 0;
 }
 .TitleEnd h2 {
+  color: #FFFFFF;
   text-align: center;
 }
 
@@ -196,4 +201,8 @@ body {
 .demo td {
   border: 1px inset #C0C0C0;
   padding: 5px;
+}
+
+.label {
+  color: white !important;
 }/*# sourceMappingURL=main.css.map */
